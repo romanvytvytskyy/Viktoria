@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+void arrayInsert(int arr[], int n) {
+    for (int i=0; i< n; i++) {
+        cin >> arr[i];
+    }
+}
+
+void findMaxMin (int arr[], int n, int& min, int& max) {
+    for (int i=0; i< n; i++) { 
+        if (max < arr[i]){
+            max = arr[i];
+        }
+        if (min > arr[i]){
+            min = arr[i];
+        }
+    }
+}
+
+
+int main() {
+    
+    int min = NULL;
+    int max = NULL;
+    int n;
+    cout << "Vvedit' kilkist' elementiv - n: " << endl;
+    cin >> n ;
+    int arr[n];
+    arrayInsert(arr, n);
+    findMaxMin(arr, n, min, max);
+    
+    cout << max << " | " << min;
+    
+    
+    return 0;
+    
+    
+}
