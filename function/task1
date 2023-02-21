@@ -28,6 +28,7 @@ int main() {
     cin >> n ;
     int arr[n];
     arrayInsert(arr, n);
+    int n = sizeof(arr)/sizeof(arr[0]);
     findMaxMin(arr, n, min, max);
     
     cout << max << " | " << min;
