@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+double findSideLen(double x1, double y1,double x2, double y2 ) {
+    double side_len = sqrt(pow(x2-x1, 2) + pow(y2-y1, 2));
+    return side_len;
+    
+}
+
+double trianPerim (double x1, double y1,double x2, double y2, double x3, double y3) {
+    double a = findSideLen(x1, y1,x2,y2);
+    double b = findSideLen(x1, y1,x3,y3);
+    double c = findSideLen(x3, y3,x2,y2);
+    double perim = a+b+c;
+    return perim;
+}
+
+
+int main() {
+    double x1,y1,x2,y2,x3,y3;
+    cin >> x1;
+    cin >> y1;
+    cin >> x2;
+    cin >> y2;
+    cin >> x3;
+    cin >> y3;
+    double perim = trianPerim(x1,y1,x2,y2,x3,y3);
+    cout<<perim;
+    return 0;
+    
+    
+}
