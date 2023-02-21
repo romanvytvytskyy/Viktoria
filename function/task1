@@ -21,8 +21,8 @@ void findMaxMin (int arr[], int n, int& min, int& max) {
 
 int main() {
     
-    int min = NULL;
-    int max = NULL;
+    int min;
+    int max;
     int n;
     cout << "Vvedit' kilkist' elementiv - n: " << endl;
     cin >> n ;
