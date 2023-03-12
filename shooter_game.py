@@ -133,8 +133,13 @@ def game():
                 game = False
             if e.type == KEYDOWN:
                 if e.key == K_SPACE:
-                    player.fire()
-                    fire_sound.play()
+                    if num_fire < 5 and rel_time == False:
+                        num_fire += 1
+                        player.fire()
+                        fire_sound.play()
+                    if num_fire >= 5 and rel_time == False:
+                        last_time = timer()
+                        rel_time = True
 
         if not finish:
             mw.blit(background, (0, 0))
