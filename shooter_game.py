@@ -84,6 +84,10 @@ killed = 0
 goal = 10
 max_lost = 3
 
+life = 3
+rel_time = False
+num_fire = 0
+
 
 def respawn_enemy():
     monster = Enemy("ufo.png", randint(
